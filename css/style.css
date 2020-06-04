@@ -1,0 +1,101 @@
+body, html {
+    height: 100%;
+    background-color: tomato;
+}
+.my-container {
+    height: 100vh;
+    position: relative;
+}
+#toonResult {
+    color: black;
+}
+
+#hangmanCol{
+    border: 2px double black;
+    height: 350px;
+    width: 300px;
+}
+.my-col {
+    height: 80px;
+}
+.resultArray {
+    margin: 10px;
+}
+
+#hangman-Title{
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+.img{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+}
+.hangman-block{
+    position: absolute;
+}
+#circle {
+    height: 55px;
+    width: 55px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 175px;
+    margin-top: 69px;
+    position: absolute;
+    
+}
+#body-hangman {
+    height: 60px;
+    width: 7px;
+    background-color: white;
+    margin-left: 199px;
+    position: absolute;
+    margin-top: 120px;
+}
+#right-hand {
+    height: 8px;
+    width: 65px;
+    background-color: white;
+    margin-left: 204px;
+    position: absolute;
+    margin-top: 137px;
+}
+#left-hand {
+    height: 8px;
+    width: 65px;
+    background-color: white;
+    margin-left: 135px;
+    position: absolute;
+    margin-top: 137px;
+}
+#left-feet {
+    height: 75px;
+    width: 62px;
+    background-color: white;
+    margin-left: 138px;
+    position: absolute;
+    margin-top: 173px;
+}
+#right-feet {
+    height: 75px;
+    width: 62px;
+    background-color: white;
+    margin-left: 204px;
+    position: absolute;
+    margin-top: 173px;
+}
+.row-third {
+    margin: 5px;
+    width: 300px;
+}
+
+.button-new-word {
+    width: 100px;
+}
+p#gameOverWoord {
+    font-style: oblique;
+    font-size: large;
+    font-weight: bold;
+    
+}

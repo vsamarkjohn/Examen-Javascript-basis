@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Galgje</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark indigo">
+        <a class="navbar-brand" href="#">
+          <img class="mr-2" src="img/hangman.png" height="50" alt="Galgje" />
+          Galgje
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-question fa-lg"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-user-astronaut fa-lg"></i
+              ></a>
+            </li>
+          </ul>
+          <span class="navbar-text white-text">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" onclick="resetPage()"
+                  ><i class="fas fa-redo fa-lg"></i
+                ></a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="row m-5">
+        <div class="col-md-12 text-center">
+          <h3 class="heading-3">
+            Galgje
+          </h3>
+          <hr class="w-25" />
+        </div>
+      </div>
+      <div class="row m-3">
+        <div class="col-md-12 text-center">
+          <h3 id="teRadenWoord" class="heading-3">
+            het woord komt hier
+          </h3>
+        </div>
+      </div>
+      <div class="row m-2">
+        <div class="col-md-6 offset-md-3 text-center">
+          <i class="far fa-times-circle fa-2x foutIcoon nietActief"></i>
+          <i class="far fa-times-circle fa-2x foutIcoon nietActief"></i>
+          <i class="far fa-times-circle fa-2x foutIcoon nietActief"></i>
+          <i class="far fa-times-circle fa-2x foutIcoon nietActief"></i>
+          <i class="far fa-times-circle fa-2x foutIcoon nietActief"></i>
+          <i class="far fa-times-circle fa-2x foutIcoon nietActief"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          id="status"
+          class="col-md-12 text-center my-5 animated pulse infinite"
+        >
+          status komt hier
+        </div>
+      </div>
+      <!-- Screen input -->
+      <section id="onScreenKeyboard">
+        <div class="row">
+          <div
+            id="a"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('a')"
+          >
+            a
+          </div>
+          <div
+            id="b"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('b')"
+          >
+            b
+          </div>
+          <div
+            id="c"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('c')"
+          >
+            c
+          </div>
+          <div
+            id="d"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('d')"
+          >
+            d
+          </div>
+          <div
+            id="e"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('e')"
+          >
+            e
+          </div>
+          <div
+            id="f"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('f')"
+          >
+            f
+          </div>
+          <div
+            id="g"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('g')"
+          >
+            g
+          </div>
+          <div
+            id="h"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('h')"
+          >
+            h
+          </div>
+          <div
+            id="i"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('i')"
+          >
+            i
+          </div>
+          <div
+            id="j"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('j')"
+          >
+            j
+          </div>
+          <div
+            id="k"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('k')"
+          >
+            k
+          </div>
+          <div
+            id="l"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('l')"
+          >
+            l
+          </div>
+        </div>
+        <div class="row">
+          <div
+            id="m"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('m')"
+          >
+            m
+          </div>
+          <div
+            id="n"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('n')"
+          >
+            n
+          </div>
+          <div
+            id="o"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('o')"
+          >
+            o
+          </div>
+          <div
+            id="p"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('p')"
+          >
+            p
+          </div>
+          <div
+            id="q"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('q')"
+          >
+            q
+          </div>
+          <div
+            id="r"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('r')"
+          >
+            r
+          </div>
+          <div
+            id="s"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('s')"
+          >
+            s
+          </div>
+          <div
+            id="t"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('t')"
+          >
+            t
+          </div>
+          <div
+            id="u"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('u')"
+          >
+            u
+          </div>
+          <div
+            id="v"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('v')"
+          >
+            v
+          </div>
+          <div
+            id="w"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('w')"
+          >
+            w
+          </div>
+          <div
+            id="x"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('x')"
+          >
+            x
+          </div>
+        </div>
+        <div class="row">
+          <div
+            id="y"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('y')"
+          >
+            y
+          </div>
+          <div
+            id="z"
+            class="btn btn-sm btn-default col-sm-3 col-md-1 m-0"
+            onclick="keuzeGemaakt('z')"
+          >
+            z
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- End your project here-->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript" src="js/galgje.js"></script>
+  </body>
+</html>
